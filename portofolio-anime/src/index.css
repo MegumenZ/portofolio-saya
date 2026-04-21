@@ -19,13 +19,13 @@
 }
 
 @utility text-outline-dark {
-  -webkit-text-stroke: 2px rgba(17, 24, 39, 0.05);
+  -webkit-text-stroke: 2px rgba(17, 24, 39, 0.15);
   color: transparent;
 }
 
 /* Outline untuk Dark Mode (Putih/Abu Transparan) */
 @utility text-outline-light {
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.05);
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.25);
   color: transparent;
 }
 

@@ -5,6 +5,8 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AnimeCursor from './components/AnimeCursor';
+import Navbar from './components/Navbar';
+import Timeline from './components/Timeline';
 import { Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -35,16 +37,13 @@ export default function App() {
         {isDark ? <Sun size={24} /> : <Moon size={24} />}
       </motion.button>
 
-      {/* Ribbon Marquee (Pita Running Text khas UI Game Jepang) */}
-      <div className="fixed top-0 left-0 w-[200%] h-6 bg-anime-dark dark:bg-zinc-900 border-b border-anime-red text-white/50 text-[10px] font-black tracking-[0.3em] uppercase flex items-center z-40 rotate-0 pointer-events-none opacity-80">
-        <div className="animate-marquee whitespace-nowrap">
-          [ SYS.PORTFOLIO ] LUTHFI ANDRI ARDANIE // FULLSTACK DEVELOPER // REACT & NEXT.JS // ITERA // [ SYS.PORTFOLIO ] LUTHFI ANDRI ARDANIE // FULLSTACK DEVELOPER // REACT & NEXT.JS // ITERA // [ SYS.PORTFOLIO ] LUTHFI ANDRI ARDANIE // FULLSTACK DEVELOPER // REACT & NEXT.JS // ITERA //
-        </div>
-      </div>
+
 
       {/* SECTION UTAMA (DIURUTKAN DENGAN BENAR) */}
+      <Navbar />
       <Hero />
       <About />
+      <Timeline />
       <Skills />
       <Projects />
       <Contact />

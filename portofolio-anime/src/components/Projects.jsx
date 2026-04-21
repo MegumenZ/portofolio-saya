@@ -8,16 +8,16 @@ export default function Projects() {
     };
 
     return (
-        <section className="py-32 px-6 relative overflow-hidden bg-gray-50 dark:bg-[#050505] transition-colors duration-500">
+        <section id="projects" className="py-32 px-6 relative bg-gray-50 dark:bg-[#050505] transition-colors duration-500 z-[10]">
             {/* Teks Outline Background - Berubah warna di Dark Mode */}
             <div className="absolute top-10 right-0 text-[10rem] font-black italic text-outline-red dark:opacity-30 pointer-events-none select-none tracking-tighter opacity-50 z-0">
                 PROJECTS
             </div>
 
-            {/* Ornamen Vertikal (Anti-Sepi) */}
-            <div className="absolute left-6 top-1/4 bottom-0 w-px bg-gray-300 dark:bg-zinc-800 hidden md:block">
-                <div className="text-gray-400 dark:text-zinc-600 font-black text-xs vertical-writing tracking-[0.5em] mt-10 ml-[-10px] transform -rotate-90">
-                    ARCHIVE DATA // 01
+            {/* Garis Koneksi Global */}
+            <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-gray-300 dark:bg-zinc-800 hidden md:block z-0">
+                <div className="absolute top-1/2 -left-[10px] text-gray-800 dark:text-zinc-500 font-black text-xs tracking-[0.5em] transform -rotate-90 origin-left whitespace-nowrap opacity-30">
+                    ARCHIVE // 04
                 </div>
             </div>
 
@@ -40,11 +40,14 @@ export default function Projects() {
                     className="flex flex-col gap-6"
                 >
                     {projectsData.map((proj, index) => (
-                        <motion.div
+                        <motion.a
+                            href={proj.github || "#"}
+                            target={proj.github ? "_blank" : "_self"}
+                            rel={proj.github ? "noopener noreferrer" : ""}
                             key={proj.id}
                             variants={menuVariants}
                             whileHover={{ x: 20 }}
-                            className="group cursor-none relative"
+                            className="group cursor-none relative block"
                         >
                             {/* Baris Menu Parallelogram - Support Dark Mode */}
                             <div className="bg-white dark:bg-zinc-900 shadow-md group-hover:bg-anime-dark dark:group-hover:bg-white transition-colors duration-300 clip-p3-menu relative z-10 border-l-8 border-transparent group-hover:border-anime-red flex flex-col md:flex-row md:items-center justify-between p-6 md:p-8">
@@ -69,7 +72,7 @@ export default function Projects() {
 
                             {/* Efek Bayangan Merah di belakang saat hover */}
                             <div className="absolute inset-0 bg-anime-red clip-p3-menu opacity-0 group-hover:opacity-100 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-300 -z-10"></div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </motion.div>
             </div>

@@ -4,12 +4,19 @@ export default function About() {
     const springConfig = { type: "spring", stiffness: 100, damping: 15 };
 
     return (
-        <section id="about" className="py-32 px-6 relative overflow-hidden bg-white dark:bg-anime-black transition-colors duration-500">
+        <section id="about" className="py-32 px-6 relative bg-white dark:bg-anime-black transition-colors duration-500 z-[40]">
             {/* Ornamen Teks Berjalan di Latar Belakang (Vertikal) */}
             <div className="absolute left-[-50px] top-0 bottom-0 flex items-center justify-center opacity-10 dark:opacity-5 pointer-events-none z-0">
                 <h2 className="text-[8rem] font-black italic text-anime-dark dark:text-white transform -rotate-90 whitespace-nowrap tracking-tighter">
                     ABOUT ME
                 </h2>
+            </div>
+
+            {/* Garis Koneksi Global */}
+            <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-gray-300 dark:bg-zinc-800 hidden md:block z-0">
+                <div className="absolute top-1/2 -left-[10px] text-gray-800 dark:text-zinc-500 font-black text-xs tracking-[0.5em] transform -rotate-90 origin-left whitespace-nowrap opacity-30">
+                    PROFILE // 01
+                </div>
             </div>
 
             <div className="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row gap-12 items-center">
@@ -57,10 +64,15 @@ export default function About() {
                         </p>
                         <br />
                         <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
-                            Tujuan karir saya adalah menjadi <span className="font-bold text-anime-dark dark:text-white italic bg-gray-200 dark:bg-zinc-800 px-2 py-1">Fullstack Developer</span> yang mampu merancang arsitektur backend yang tangguh sekaligus meracik antarmuka frontend yang dinamis dan interaktif.
+                            Tujuan karir saya adalah menjadi <span className="font-bold text-anime-dark dark:text-white italic bg-gray-200 dark:bg-zinc-800 px-2 py-1">Fullstack Developer</span> yang mampu merancang arsitektur backend yang baik sekaligus meracik interface frontend yang dinamis dan interaktif.
                         </p>
                     </div>
                 </motion.div>
+            </div>
+
+            {/* P5 Style Divider - Static Skewed Tape */}
+            <div className="absolute -bottom-4 left-[-2%] w-[105%] h-8 bg-anime-dark dark:bg-white rotate-[1.5deg] z-50 border-y-2 border-anime-red shadow-xl pointer-events-none overflow-hidden">
+                <div className="absolute inset-0 bg-[repeating-linear-gradient(-45deg,transparent,transparent_10px,rgba(255,255,255,0.05)_10px,rgba(255,255,255,0.05)_20px)] dark:bg-[repeating-linear-gradient(-45deg,transparent,transparent_10px,rgba(0,0,0,0.1)_10px,rgba(0,0,0,0.1)_20px)]"></div>
             </div>
         </section>
     );

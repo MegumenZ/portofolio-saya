@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const skills = ['React', 'Next.js', 'ElysiaJS', 'Tailwind CSS', 'Vite', 'Node.js', 'TypeScript', 'GCP', 'Ceph'];
+const skills = ['React', 'Next.js', 'ElysiaJS', 'Tailwind CSS', 'Vite', 'Node.js', 'TypeScript', 'Ceph'];
 
 export default function Skills() {
     const containerVariants = {
@@ -14,9 +14,16 @@ export default function Skills() {
     };
 
     return (
-        <section id="skills" className="py-32 px-6 relative overflow-hidden bg-gray-100 dark:bg-[#0a0a0a] transition-colors duration-500">
+        <section id="skills" className="py-32 px-6 relative bg-gray-100 dark:bg-[#0a0a0a] transition-colors duration-500 z-[20]">
             {/* Latar Belakang Halftone */}
             <div className="absolute inset-0 bg-halftone opacity-30 dark:opacity-10 pointer-events-none"></div>
+
+            {/* Garis Koneksi Global */}
+            <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-gray-300 dark:bg-zinc-800 hidden md:block z-0">
+                <div className="absolute top-[40%] -left-[10px] text-gray-800 dark:text-zinc-400 font-black text-xs tracking-[0.5em] transform -rotate-90 origin-left whitespace-nowrap opacity-60">
+                    ARSENAL // 03
+                </div>
+            </div>
 
             <div className="max-w-5xl mx-auto relative z-10">
                 <motion.div
@@ -54,6 +61,11 @@ export default function Skills() {
                         </motion.div>
                     ))}
                 </motion.div>
+            </div>
+
+            {/* P5 Style Divider - Static Skewed Tape */}
+            <div className="absolute -bottom-4 left-[-2%] w-[105%] h-8 bg-anime-red rotate-[1deg] z-50 border-y-2 border-anime-dark dark:border-white shadow-xl pointer-events-none overflow-hidden">
+                <div className="absolute inset-0 bg-[repeating-linear-gradient(-45deg,transparent,transparent_10px,rgba(0,0,0,0.2)_10px,rgba(0,0,0,0.2)_20px)] dark:bg-[repeating-linear-gradient(-45deg,transparent,transparent_10px,rgba(255,255,255,0.15)_10px,rgba(255,255,255,0.15)_20px)]"></div>
             </div>
         </section>
     );
