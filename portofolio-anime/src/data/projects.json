@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "title": "Private Cloud Storage System",
+        "description": "Arsitektur cloud storage terdesentralisasi berbasis Ceph Object Storage dengan antarmuka manajemen visual.",
+        "techStack": [
+            "React",
+            "Tailwind CSS",
+            "GCP",
+            "Ceph"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "E-Commerce Fast Backend API",
+        "description": "Sistem backend performa tinggi untuk e-commerce, mengoptimalkan proses checkout dan manajemen user.",
+        "techStack": [
+            "Next.js",
+            "ElysiaJS",
+            "Bun"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "QoS Network Monitor Dashboard",
+        "description": "Aplikasi analitik jaringan dengan standar ETSI TIPHON untuk memantau metrik throughput dan delay secara real-time.",
+        "techStack": [
+            "React",
+            "Anime.js",
+            "Wireshark"
+        ]
+    }
+]
